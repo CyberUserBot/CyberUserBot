@@ -593,8 +593,8 @@ async def sekil_axtar(event):
         await axtarilir.delete()
     except:
         await event.edit("**Şəkil tapılmadı!**")
-    
-    os.system("rm -rf sekil_axtaris")        
+    os.chdir('/root/CyberUserBot')
+    os.system("rm -rf sekil_axtaris")               
 
 def deEmojify(inputString):
     return get_emoji_regexp().sub(u'', inputString)
